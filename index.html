@@ -389,11 +389,13 @@
                 </div>
                 <div class="join-email">
                     <h3 class="join-title">Подпишитесь на рассылку</h3>
-                    <form action="" method="GET" class="email-form">
-                        <input type="email" name="email" class="email-input" placeholder="Email">
+                    <form action="" method="GET" class="join-email-form">
+                        <label for="join-email">
+                            <input type="email" name="join-email" class="join-email-input" placeholder="Email">
+                        </label>
                         <button type="submit" class="join-btn">Подписаться
                             <svg class="email-join-svg" width="24" height="24">
-                                <use href="./images/sprite.svg#icon-btn"></use>
+                                <use href="./images/icons.svg#icon-btn"></use>
                             </svg>
                         </button>
                     </form>
@@ -409,13 +411,13 @@
                     <use href="./images/sprite.svg#close"></use>
                 </svg>
             </button>
-            <form name="form" action="" class="modal-form">
+            <form name="form" class="modal-form">
                 <p class="modal-form-title">Оставьте свои данные, мы вам перезвоним</p>
                 <label for="name" class="modal-form-label">Имя
                     <span class="modal-form-label-wrap">
                         <input type="text" name="name" class="modal-form-input" required>
                         <svg class="modal-form-icons-svg" width="18" height="18">
-                            <use href="./images/sprite.svg#person-black"></use>
+                            <use href="./images/icons.svg#icon-person-black"></use>
                         </svg>
                     </span>
                 </label>
@@ -423,7 +425,7 @@
                     <span class="modal-form-label-wrap">
                         <input type="tel" name="phone" class="modal-form-input" required>
                         <svg class="modal-form-icons-svg" width="18" height="18">
-                            <use href="./images/sprite.svg#phone-black"></use>
+                            <use href="./images/icons.svg#icon-phone-black"></use>
                         </svg>
                     </span>
                 </label>
@@ -431,35 +433,27 @@
                     <span class="modal-form-label-wrap">
                         <input type="email" name="email" class="modal-form-input" required>
                         <svg class="modal-form-icons-svg" width="18" height="18">
-                            <use href="./images/sprite.svg#email-black"></use>
+                            <use href="./images/icons.svg#icon-email-black"></use>
                         </svg>
                     </span>
                 </label>
                 <label for="comment" class="modal-form-label">Комментарий
                     <textarea name="comment-textarea" class="modal-textarea" placeholder="Введите текст"></textarea>
                 </label>
-                <!-- Через псевдокласс before 
-                    <div class="modal-form-checkbox">
-                    <input name="checkbox" type="checkbox" id="checkbox"
-                        class="modal-form-checkbox-input visually-hidden" required>
-                    <label for="checkbox" class="modal-form-checkbox-label">
-                        Соглашаюсь с рассылкой и принимаю <a href=""class="modal-form-link">Условия договора</a>
-                    </label> 
-                -->
                 <div class="modal-form-checkbox">
                     <input name="checkbox" type="checkbox" id="checkbox"
                         class="modal-form-checkbox-input visually-hidden" required>
                     <label for="checkbox" class="modal-form-checkbox-label">
                         <svg class="modal-form-check-svg">
-                            <use href="./images/sprite.svg#chekmark"></use>
+                            <use href="./images/icons.svg#icon-checkmark"></use>
                         </svg>
-                        Соглашаюсь с рассылкой и принимаю <a href="" class="modal-form-link">Условия договора</a>
+                        Соглашаюсь с рассылкой и принимаю <a href="" class="modal-form-link">Условия
+                            договора</a>
                     </label>
                 </div>
                 <button type="submit" class="modal-form-btn">Отправить</button>
+            </form>
         </div>
-        </form>
-    </div>
     </div>
     <script src="./js/modal.js"></script>
 </body>
