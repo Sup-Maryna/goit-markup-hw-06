@@ -604,7 +604,6 @@ address {
   background-color: transparent;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  outline: none;
   cursor: pointer;
 }
 
@@ -759,12 +758,12 @@ address {
   resize: none;
   outline: none;
   cursor: pointer;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-textarea:hover,
 .modal-textarea:focus {
-  border: 1px solid var(--modal-border-color);
+  border-color: var(--modal-border-color);
 }
 
 .modal-textarea::placeholder {
@@ -798,29 +797,18 @@ address {
   border-radius: 4px;
   vertical-align: middle;
   fill: var(--white-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-checkbox-input:checked
-  + .modal-form-checkbox-label
-  .modal-form-check-svg {
+.modal-form-checkbox-input:checked + * .modal-form-check-svg {
   background-color: var(--active-color);
   background-size: contain;
   background-origin: border-box;
   border-color: var(--active-color);
 }
 
-.modal-form-checkbox-input:focus
-  + .modal-form-checkbox-label
-  .modal-form-check-svg {
-  background-color: var(--active-color);
-  background-size: contain;
-  background-origin: border-box;
-  border-color: var(--active-color);
-}
-
-.modal-form-checkbox-input:checked:focus
-  + .modal-form-checkbox-label
-  .modal-form-check-svg {
+.modal-form-checkbox-input:focus,
+.modal-form-checkbox-input:hover {
   background-color: var(--active-color);
   background-size: contain;
   background-origin: border-box;
